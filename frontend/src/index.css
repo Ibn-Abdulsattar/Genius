@@ -1,0 +1,406 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hero-Logo {
+  height: 20%;
+  margin-bottom: 1rem;
+}
+
+.Hero-Content {
+  height: 95vh;
+  padding-top: 1.5rem;
+}
+
+.hero-content {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+}
+
+.hero-Login-Button {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.Login-form {
+  padding: 2rem;
+  border-radius: 0.7rem;
+  height: 60%;
+}
+
+.Login-form div {
+  padding: 0.5rem;
+}
+
+.Login-form div input:focus {
+  outline: none;
+}
+
+.login {
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  margin-top: 0.5rem;
+}
+
+.navbar-menu li {
+  color: #fff;
+}
+
+.navbar {
+  padding: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.Mobile-Menu ul {
+  padding: 0.5rem;
+}
+
+.Mobile-Menu ul li div {
+  padding: 0.5rem;
+}
+
+.Mobile-User {
+  padding-top: 0.5rem;
+}
+
+.user-navbar {
+  margin-top: 0.5rem;
+}
+
+.Mobile-menu-button {
+  padding: 0.5rem;
+}
+
+.page-content {
+  padding: 0 1rem;
+  padding-bottom: 1rem;
+  background-color: #012331;
+}
+
+.dashboard-left {
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .dashboard-left {
+    padding: 2rem;
+  }
+}
+
+/* Custom Scrollbar */
+.side-scroll::-webkit-scrollbar {
+  width: 0.1px;
+}
+
+.side-scroll::-webkit-scrollbar-track {
+  background: #012331;
+  border-radius: 50%;
+}
+
+.side-scroll::-webkit-scrollbar-thumb {
+  background: #012331;
+  border-radius: 50%;
+}
+
+.side-scroll::-webkit-scrollbar-thumb:hover {
+  background: #01475c;
+}
+
+.dashboard-profile-img {
+  padding: 2px;
+}
+
+.dashboard-profile {
+  margin-bottom: 1rem;
+}
+
+.stats-card {
+  padding: 2rem;
+}
+
+.dashboard-title {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .Activity-Top {
+    padding: 1rem 1rem;
+  }
+
+  .Activity-bottom {
+    /* padding: 1rem; */
+    margin: 1rem;
+  }
+  .page-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .Activity-Top {
+    padding: 0.5rem;
+  }
+
+  .Activity-bottom {
+    padding: 1rem !important;
+    margin: 1rem !important;
+  }
+  .page-content {
+    padding: 1rem;
+  }
+
+  .activity-modal-container {
+    padding: 1rem !important;
+  }
+
+  .filter-btn {
+    padding: 0.3rem !important;
+  }
+
+  .Surveys-bottom, .Surveys-Top {
+    margin: 0rem 1rem !important;
+  }
+
+  .Setting-bottom-left-pg{
+    padding: .7rem 1rem !important;
+  }
+
+.Earning-Top{
+  padding: 0rem 1rem !important;
+  padding-top: 1rem !important;
+}
+
+}
+
+@media (max-width: 768px) {
+  .upload-activity-btn {
+    padding: 0.3rem !important;
+  }
+    .survey-support-input{
+    margin-bottom: 1rem !important;
+    margin-top: .2rem !important;
+  }
+
+    .survey-support{
+    padding: 1rem !important;
+  }
+}
+
+@media (max-height: 535px) and (min-width: 1024px) {
+  .All-Content {
+    margin-bottom: 7rem;
+  }
+  .dashboard-stats {
+    height: 40%;
+  }
+}
+
+.Activity-Top {
+  padding: 1rem 2rem;
+}
+
+.halfrem {
+  padding: 0.5rem;
+}
+
+.pointthreerem {
+  padding: 0.3rem;
+}
+
+.onerem {
+  padding: 1rem;
+}
+
+.marginy {
+  margin: 0.5rem 0rem;
+}
+
+.activitylabel {
+  margin-bottom: 5px;
+}
+
+.tworem {
+  padding: 2rem;
+}
+
+.Activity-bottom {
+  padding: 1rem 2rem;
+  margin: 0rem 2rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .quiz-activity {
+    padding: 0.5rem;
+  }
+
+}
+
+@media (max-width: 1024px) {
+    .Setting-bottom-left{
+order: 2 !important;
+  }
+  .Setting-bottom-Right{
+    order: 1 !important;
+  }
+
+  .about{
+  padding: 0rem !important;
+}
+}
+
+.StartedModel-header {
+  margin-bottom: 0.5rem;
+}
+
+.StartedModel-content {
+  margin-bottom: 0.8rem;
+}
+
+.Activity-bottom-description {
+  margin-bottom: 1rem;
+}
+
+.Activity-bottom-attachments {
+  margin-bottom: 0.5rem;
+}
+
+.marginb2rem {
+  margin-bottom: 2rem;
+}
+
+.Activity-bottom-answer {
+  margin-bottom: 1rem;
+}
+
+.show-activity-button {
+  margin: 1rem;
+}
+
+.upload-activity-btn {
+  padding: 1rem;
+}
+
+.filter-btn {
+  padding: 1rem;
+}
+
+.reviewModel {
+  padding: 1rem;
+}
+
+.Review-descrip {
+  padding-bottom: 0.5rem;
+}
+
+.starfall-card {
+  margin-top: auto !important;
+}
+
+.cart-card {
+  padding: 1rem;
+  margin: 0.5rem 0rem;
+}
+
+.Back-Button {
+  margin-bottom: 1rem;
+}
+
+.Button-Cart {
+  margin-top: 3rem;
+}
+
+.Attachments {
+  padding-bottom: 2rem;
+}
+
+.Surveys-bottom, .Surveys-Top {
+  margin: 0rem 2rem;
+}
+
+.survey-qs {
+  padding: 1rem 0rem;
+}
+
+  .survey-support{
+    padding: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .survey-support-input{
+    margin-bottom: 2rem;
+    margin-top: .5rem;
+  }
+
+  .Survey-button{
+    margin-bottom: 1rem;
+  }
+
+  .Surveys-Top-title{
+    margin-bottom: .7rem;
+  }
+
+  .Surveys-Top{
+    padding-top: .3rem;
+  }
+
+  .Setting-bottom-left{
+    margin: 1rem 0rem;
+    /* margin-top: 3rem; */
+  }
+
+  .Setting-Top {
+    padding: 2rem;
+    padding-bottom: 0rem;
+  }
+
+    .Setting-bottom-left{
+order: 1;
+  }
+  .Setting-bottom-Right{
+    order: 2;
+  }
+
+
+
+.Setting-bottom-left-pg{
+  padding: 1rem;
+}
+
+.Earning-Top{
+  padding: 0rem 2rem;
+  padding-top: 1rem;
+}
+
+.Redemption-status{
+  margin-bottom: .8rem;
+}
+
+.docsCard{
+  margin-bottom: .5rem;
+}
+
+.about-doc{
+  margin-bottom: .5rem;
+}
+
+.last{
+  margin-bottom: 1rem;
+}
+
+.break-btn{
+  margin-top: 1rem;
+}
+
+.Survey-banner{
+  padding: 0rem .5rem;
+}
+
+.about{
+  padding: 1rem;
+}
