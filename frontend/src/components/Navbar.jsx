@@ -94,7 +94,7 @@ export default function Navbar() {
               navigate("/dashboard");
               setActive("Dashboard");
             }}
-            className="navbar-logo cursor-pointer flex-shrink-0"
+            className="navbar-logo hover:scale-97 transition-all duration-200 cursor-pointer flex-shrink-0"
           >
             <img
               src="/image/img-1.png"
@@ -109,7 +109,7 @@ export default function Navbar() {
               <li
                 key={index}
                 onClick={() => navigate(item.link)}
-                className={`flex items-center gap-1 relative ${
+                className={`flex items-center gap-1 hover:shadow-lg relative ${
                   item.highlight ? "flex-col" : ""
                 }`}
               >
