@@ -1,42 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import Quiz from "./Quiz";
+import surveys from "../../data/surveys";
+import DocsTitle from "../../components/DocsTitle";
+import useSurvey from "../../hooks/useSurvey";
 
 export default function Surveys() {
-  const [survey, setSurvey] = useState("Todo");
-  const [student, setStudent] = useState(false);
-  const [start, setStart] = useState(null);
-
-  const handleActive = (state) => {
-    setSurvey(state);
-  };
-
-  const surveys = [
-    {
-      id: "01",
-      question: "What benefits will I receive as a Lyft Pink member?",
-    },
-    {
-      id: "02",
-      question: "How does the free Priority Pickup upgrades benefit work?",
-    },
-    {
-      id: "03",
-      question: "Which rides does member-exclusive pricing apply to?",
-    },
-    {
-      id: "04",
-      question: "Do discounts impact driver pay?",
-    },
-    {
-      id: "05",
-      question: "How does the bike benefit work and where is it available?",
-    },
-    {
-      id: "06",
-      question: "What is Bike Angels?",
-    },
-  ];
+  const { survey, setSurvey, student, setStudent, handleActive } = useSurvey();
 
   return (
     <div className="page-content font-serif w-full">
@@ -48,9 +18,7 @@ export default function Surveys() {
             {/* Left section */}
             <div className="flex flex-col z-2 lg:w-[50%] sm:flex-row items-start sm:items-center gap-3 md:gap-4 flex-1">
               {/* Title */}
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-[#012331] border-b-4 border-yellow-400 pb-1 whitespace-nowrap">
-                Surveys
-              </h2>
+              <DocsTitle title="Surveys" />
 
               {/* Dropdowns */}
               {survey === "Todo" && (

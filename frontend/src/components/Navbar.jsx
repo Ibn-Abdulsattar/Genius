@@ -151,7 +151,7 @@ export default function Navbar() {
                   alt="User"
                   className="user-avatar w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] rounded-full object-cover"
                 />
-                <div className="absolute left-3 flex items-center lg:left-4 bottom-0 bg-white font-normal text-[7px] lg:text-[8px] text-center w-[20px] lg:w-[24px] rounded-sm text-[#012331] border border-[#012331]">
+                <div className="absolute left-3 user-box flex items-center lg:left-4 bottom-0 bg-white font-normal text-[7px] lg:text-[8px] text-center w-[20px] lg:w-[24px] rounded-sm text-[#012331] border border-[#012331]">
                   <span>
                     <img src="/image/img-22.png" className="" />
                   </span>{" "}
@@ -214,7 +214,7 @@ export default function Navbar() {
               : "max-h-0 opacity-0"
           }`}
         >
-          <ul className="flex  flex-col gap-2 pb-4">
+          <ul className="flex  flex-col gap-2">
             {navbarItems.map((item, index) => (
               <li
                 key={index}

@@ -3,50 +3,13 @@ import Quiz from "./Quiz";
 import Filter from "./Filter";
 import GetStartedModel from "./GetStartedModel";
 import ReviewModel from "../../components/ReviewModel";
+import activities from "../../data/activities";
+import DocsTitle from "../../components/DocsTitle";
 
 export default function Activities() {
   const [activity, setActivity] = useState("Todo");
   const [filter, setFilter] = useState(null);
   const [start, setStart] = useState(null);
-
-  const activities = [
-    {
-      id: "01",
-      question: "What benefits will I receive as a Lyft Pink member?",
-      buttonText: "Get Started",
-      stars: 25,
-    },
-    {
-      id: "02",
-      question: "How does the free Priority Pickup upgrades benefit work?",
-      buttonText: "Get Started",
-      stars: 25,
-    },
-    {
-      id: "03",
-      question: "Which rides does member-exclusive pricing apply to?",
-      buttonText: "Get Started",
-      stars: 20,
-    },
-    {
-      id: "04",
-      question: "Do discounts impact driver pay?",
-      buttonText: "Get Started",
-      stars: 20,
-    },
-    {
-      id: "05",
-      question: "How does the bike benefit work and where is it available?",
-      buttonText: "Get Started",
-      stars: 15,
-    },
-    {
-      id: "06",
-      question: "What is Bike Angels?",
-      buttonText: "Get Started",
-      stars: 15,
-    },
-  ];
 
   const handleActive = (state) => {
     setActivity(state);
@@ -62,13 +25,11 @@ export default function Activities() {
             {/* Left section */}
             <div className="flex flex-col z-2 lg:w-[50%] sm:flex-row items-start sm:items-center gap-3 md:gap-4 flex-1">
               {/* Title */}
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-[#012331] border-b-4 border-yellow-400 pb-1 whitespace-nowrap">
-                Activities
-              </h2>
+              <DocsTitle title="Activities" />
 
               {/* Dropdowns */}
               {activity === "Todo" && (
-                <div className="flex flex-wrap gap-4 md:gap-3 halfrem w-full lg:w-[80%]">
+                <div className="flex flex-wrap gap-2 md:gap-3  w-full lg:w-[80%]">
                   <div className="bg-white cursor-pointer halfrem border border-gray-300 rounded-md p-2 flex-1 sm:flex-none w-[48%] lg:w-[50%]">
                     <select className="cursor-pointer  w-full text-sm md:text-base text-gray-600 focus:outline-none bg-transparent">
                       <option>Select Subject</option>

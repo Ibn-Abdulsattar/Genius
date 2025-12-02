@@ -143,7 +143,8 @@
 
 @media (max-width: 425px) {
   .Activity-Top {
-    padding: 0.5rem;
+    padding: 1rem !important;
+    padding-bottom: 0rem !important;
   }
 
   .Activity-bottom {
@@ -403,4 +404,8 @@ order: 1;
 
 .about{
   padding: 1rem;
+}
+
+.user-box {
+  padding: 0rem 0.2rem;
 }

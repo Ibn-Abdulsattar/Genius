@@ -1,14 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { surveyData } from "../../constants/formData";
 
 export default function SurveysFormPg() {
   const navigate = useNavigate();
-  const surveyData = [
-    { title: "Name", placeholder: "Short answer text" },
-    { title: "Address", placeholder: "Long answer text" },
-    { title: "Phone Number", placeholder: "Short answer text" },
-    { title: "Comments", placeholder: "Long answer text" },
-  ];
+  
   return (
     <div className="page-content font-serif w-full">
       <div className=" bg-[#d9d9d9] rounded-2xl md:rounded-3xl min-h-[78.2vh] overflow-x-hidden overflow-y-auto">

@@ -1,27 +1,22 @@
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import BreakModule from "./BreakModule";
+import settingPage from "../../data/setting";
+import DocsTitle from "../../components/DocsTitle";
 
 export default function Settings() {
   const [isBreak, setIsBreak] = useState(false);
 const navigate = useNavigate();
 
-  const settingPage = [
-    { title: "Earning Overview", url: "/earningoverviewpg" },
-    { title: "About Us", url: "/aboutuspg" },
-    { title: "Privacy Policy", url: "/privacypg" },
-  ];
   return (
     <div className="page-content font-serif w-full">
-      <div className=" bg-[#d9d9d9] rounded-2xl md:rounded-3xl min-h-[78.2vh] overflow-x-hidden overflow-y-auto">
+      <div className=" bg-[#d9d9d9] rounded-2xl md:rounded-3xl min-h-[77.9vh] overflow-x-hidden overflow-y-auto">
         {/* All Content */}
         <div className="All-Content ">
           {/* Setting-Top */}
           <div className="Setting-Top  ">
             {/* Title */}
-            <h2 className="text-2xl Surveys-Top-title  inline-block sm:text-3xl lg:text-4xl font-medium text-[#012331] border-b-4 border-yellow-400 whitespace-nowrap">
-              Settings
-            </h2>
+            <DocsTitle title="Settings" />
           </div>
           {/* Setting-bottom */}
           <div className="Surveys-bottom">

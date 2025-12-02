@@ -1,19 +1,13 @@
 import React from "react";
 import Card from "./Card";
+import Dashboard_Stats from "../../data/dashboard.js";
+import DocsTitle from "../../components/DocsTitle.jsx";
 
 export default function Dashboard() {
-  const Dashboard_Stats = [
-    { title: "Activities \nCompleted", num: "10" },
-    { title: "Stars \nEarned ", num: "25" },
-    { title: "Pending \nActivities", num: "10" },
-    { title: "Surveys \nCompleted", num: "05" },
-    { title: "Stars \nPending", num: "05" },
-    { title: "Surveys \nPending", num: "05" },
-  ];
 
   return (
     <div className="page-content font-serif w-full">
-      <div className="dashboard bg-white rounded-3xl min-h-[78.2vh] side-scroll overflow-x-hidden overflow-y-auto">
+      <div className="dashboard bg-white rounded-3xl min-h-[77.9vh] side-scroll overflow-x-hidden overflow-y-auto">
         {/* All Content */}
         <div className="All-Content">
           <div className="flex flex-col relative lg:flex-row justify-between items-start gap-6 lg:gap-8">
