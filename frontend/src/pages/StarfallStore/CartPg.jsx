@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import ReviewModel from "../../components/ReviewModel";
-import { useModule } from "../../context/moduleContext";
+import useModule from "../../hooks/useModule";
 
 export default function CartPg() {
   const {reviewModel, setReviewModel} = useModule();

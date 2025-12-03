@@ -1,7 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useModule } from "../context/moduleContext";
-
+import useModule from "./useModule";
 export default function useShowActivityPg() {
   const [answer, setAnswer] = useState(null);
   const { reviewModel, setReviewModel } = useModule();

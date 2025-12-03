@@ -10,4 +10,5 @@ export function ModuleProvider({children}) {
   );
 }
 
-export const useModule = () => useContext(ModuleContext);
+export const moduleHook = () => useContext(ModuleContext);
+

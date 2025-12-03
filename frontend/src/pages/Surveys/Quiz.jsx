@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useModule } from "../../context/moduleContext";
+import useModule from "../../hooks/useModule";
 
 export default function Quiz({
   qs,

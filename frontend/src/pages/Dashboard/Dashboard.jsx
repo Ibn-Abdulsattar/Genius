@@ -7,12 +7,12 @@ export default function Dashboard() {
 
   return (
     <div className="page-content font-serif w-full">
-      <div className="dashboard bg-white rounded-3xl min-h-[77.9vh] side-scroll overflow-x-hidden overflow-y-auto">
+      <div className="dashboard bg-white rounded-3xl max-h-[77.9vh] side-scroll overflow-x-hidden overflow-y-auto">
         {/* All Content */}
         <div className="All-Content">
-          <div className="flex flex-col relative lg:flex-row justify-between items-start gap-6 lg:gap-8">
+          <div className="flex flex-col overflow-y-auto relative lg:flex-row justify-between items-start gap-6 lg:gap-8">
             {/* Left Section */}
-            <div className="dashboard-left space-y-4 w-full lg:w-1/2">
+            <div className="dashboard-left w-full lg:w-1/2">
               {/* Profile */}
               <div className="dashboard-profile flex items-center gap-3 flex-wrap">
                 <div className="dashboard-profile-img rounded-full border-2 border-[#FED302]">

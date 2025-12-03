@@ -1,6 +1,5 @@
 import React from "react";
-import { useModule } from "../context/moduleContext";
-
+import useModule from "../hooks/useModule";
 export default function ReviewModel({
   img,
   title,

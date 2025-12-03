@@ -176,6 +176,9 @@
   padding-top: 1rem !important;
 }
 
+.dashboard-left {
+  padding: 1rem;
+}
 }
 
 @media (max-width: 768px) {
@@ -408,4 +411,8 @@ order: 1;
 
 .user-box {
   padding: 0rem 0.2rem;
+}
+
+.starfall-card{
+  margin-bottom: 1rem;
 }
