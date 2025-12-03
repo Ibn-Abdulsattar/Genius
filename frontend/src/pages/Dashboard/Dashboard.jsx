@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "./Card";
 import Dashboard_Stats from "../../data/dashboard.js";
 import DocsTitle from "../../components/DocsTitle.jsx";
@@ -50,7 +49,7 @@ export default function Dashboard() {
                 <img
                   src="/image/img-5.png"
                   alt="Child learning illustration"
-                  className="rounded-lg w-full  max-h-[auto] desktop-right-image lg:max-h-[78vh] md:object-cover"
+                  className="rounded-lg w-full  max-h-[auto] desktop-right-image lg:max-h-[77.9vh] md:object-cover"
                 />
               </div>
             </div>

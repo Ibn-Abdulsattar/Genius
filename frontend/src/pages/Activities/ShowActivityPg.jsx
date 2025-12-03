@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import ReviewModel from "../../components/ReviewModel";
 import { uploadButtons } from "../../data/common";
 import useShowActivityPg from "../../hooks/useShowActivityPg";
+import BackButton from "../../components/BackButton";
 
 export default function ShowActivityPg() {
   const {
@@ -31,26 +32,7 @@ export default function ShowActivityPg() {
           {/* Activity-bottom */}
           <div className="Activity-bottom bg-white rounded-2xl shadow-md  relative">
             {/* Back-Button */}
-            <button
-              onClick={() => {
-                navigate(-1);
-              }}
-              className="group Back-Button cursor-pointer flex items-center"
-            >
-              <svg
-                className="w-10 h-10 text-green -ml-4 transition-all duration-300 group-hover:text-purple-300 group-hover:-translate-x-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2.5}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
+            <BackButton />
 
             {/* Question */}
             <div className="mb-3">

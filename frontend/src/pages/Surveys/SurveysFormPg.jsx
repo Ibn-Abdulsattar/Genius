@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { surveyData } from "../../constants/formData";
+import BackButton from "../../components/BackButton";
 
 export default function SurveysFormPg() {
   const navigate = useNavigate();
@@ -13,26 +14,7 @@ export default function SurveysFormPg() {
           {/* Survey-Top */}
           <div className="Surveys-Top  ">
             {/* Back-Button */}
-            <button
-              onClick={() => {
-                navigate(-1);
-              }}
-              className="group Back-Button cursor-pointer flex items-center"
-            >
-              <svg
-                className="w-10 h-10 text-[#012331] -ml-4 transition-all duration-300 group-hover:text-purple-300 group-hover:-translate-x-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2.5}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
+            <BackButton/>
 
             {/* Title */}
             <h2 className="text-2xl Surveys-Top-title  inline-block sm:text-3xl lg:text-4xl font-medium text-[#012331] border-b-4 border-yellow-400 whitespace-nowrap">
