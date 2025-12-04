@@ -11,7 +11,7 @@ function App() {
   const showNavbar = !hideNavbarRoutes.includes(location.pathname);
   return (
     <>
-      {showNavbar && <Navbar />}
+      {/* {showNavbar && <Navbar />} */}
       <ModuleProvider>
         <AppRoutes/>
       </ModuleProvider>

@@ -26,7 +26,7 @@ const navigate = useNavigate();
                 {settingPage.map((item, idx) => (
                   <button
                     key={idx}
-                    onClick={() => navigate(item.url)}
+                    onClick={() => navigate(`${item.url}`)}
                     className="w-full Setting-bottom-left-pg flex justify-between items-center cursor-pointer text-left bg-white rounded-lg text-base sm:text-lg md:text-xl  font-medium hover:bg-gray-50 transition-all duration-200"
                   >
                     {item.title}

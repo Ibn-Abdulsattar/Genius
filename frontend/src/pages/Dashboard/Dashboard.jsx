@@ -26,7 +26,7 @@ export default function Dashboard() {
                     Welcome Christina Dykes
                   </h2>
                   <p className="text-sm truncate sm:text-lg font-normal font-[lato] tracking-wide sm:tracking-wider md:tracking-[.19rem] text-gray-500">
-                    Discover the Statistics of Your Genius™
+                    Discover the Statistics of Your Genius"
                   </p>
                 </div>
               </div>
