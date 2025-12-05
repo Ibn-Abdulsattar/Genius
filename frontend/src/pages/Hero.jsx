@@ -16,9 +16,9 @@ export default function Hero() {
       </video>
 
       {/* Content */}
-      <div className="Hero-Content relative text-white px-4 sm:px-6 lg:px-8 py-8 ">
+      <div className="Hero-Content relative text-white flex flex-col justify-center items-center min-h-screen">
         {/* Logo */}
-        <div className="hero-Logo flex justify-center items-center mb-8 sm:mb-12 lg:mb-16">
+        <div className="hero-Logo flex justify-center items-center ">
           <img
             src="/image/img-1.png"
             className="w-40 h-24 sm:w-50 sm:h-30 md:w-60 md:h-30 lg:w-70 lg:h-38 object-contain"
@@ -27,9 +27,9 @@ export default function Hero() {
         </div>
 
         {/* Main Content */}
-        <div className=" hero-content flex flex-col justify-center mx-auto ">
+        <div className=" hero-content flex flex-col justify-start ">
           {/* Heading */}
-          <h1 className="font-normal font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-7xl mb-6 sm:mb-8 lg:mb-10 leading-tight">
+          <h1 className="font-normal font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-7xl leading-tight">
             Where education <br  />
             <span className="sm:hidden"> </span>
             and imagination meet.

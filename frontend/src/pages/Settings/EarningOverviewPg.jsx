@@ -11,11 +11,11 @@ export default function EarningOverviewPg() {
 
   return (
     <div className="page-content font-serif w-full">
-      <div className=" bg-[#d9d9d9] rounded-2xl md:rounded-3xl min-h-[78.2vh] overflow-x-hidden overflow-y-auto">
+      <div className=" bg-[#d9d9d9] rounded-2xl md:rounded-3xl min-h-[77.9vh] overflow-x-hidden overflow-y-auto">
         {/* All Content */}
         <div className="All-Content ">
           {/* Earning-Top */}
-          <div className="Earning-Top  ">
+          <div className="Earning-Top  flex">
             {/* Back-button */}
             <BackButton />
             {/* Title */}

@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Filter({ filter, setFilter }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState("");
+    const [subject, setsubject] = useState(false);
+  const [select, setSelect] = useState("");
+  const options = ["q1", "q2"];
   return (
     <>
       {filter && (
@@ -11,13 +16,17 @@ export default function Filter({ filter, setFilter }) {
           {/* Modal Container */}
           <div className="bg-[#F4F4F4]  tworem activity-modal-container w-[87%] sm:w-[85%] md:w-[75%] lg:w-[65%] xl:w-[60%] max-w-[900px] h-auto max-h-[80vh] sm:max-h-[70vh] md:h-[63%] rounded-2xl sm:rounded-3xl shadow-lg overflow-y-auto">
             <h2 className="text-center flex justify-center text-2xl sm:text-xl md:text-2xl font-semibold mb-4 sm:mb-6 relative">
-              <span className="border-b-2 text-[#012331] border-yellow-400 pb-1">Filter</span>
+              <span className="border-b-2 text-[#012331] border-yellow-400 pb-1">
+                Filter
+              </span>
             </h2>
 
             <div className="grid halfrem font-sans grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               {/* Start Date */}
               <div className="flex marginy flex-col">
-                <label className="text-sm sm:text-md text-black font-semibold activitylabel">Start Date</label>
+                <label className="text-sm sm:text-md text-black font-semibold activitylabel">
+                  Start Date
+                </label>
                 <div className="relative">
                   <input
                     type="date"
@@ -89,31 +98,117 @@ export default function Filter({ filter, setFilter }) {
 
               {/* Select Subject */}
               <div className="flex marginy flex-col">
-                <label className="text-sm sm:text-md text-black font-semibold activitylabel">
+                <label
+                  className="text-sm sm:text-md text-black font-semibold activitylabel"
+                  htmlFor="Quarter"
+                >
                   Select Subject
                 </label>
-                <div className="w-full bg-white halfrem border border-gray-300 rounded-xl sm:rounded-2xl px-2 sm:px-3">
-                  <select className="w-full outline-none cursor-pointer bg-white halfrem rounded-xl sm:rounded-2xl text-sm sm:text-base text-gray-700">
-                    <option value="">Select...</option>
-                  </select>
+
+                <div className="relative w-full ">
+                  {/* Dropdown button */}
+                  <button
+                    onClick={() => setsubject(!subject)}
+                    className="w-full bg-white border border-gray-300 onerem cursor-pointer rounded-xl flex justify-between items-center text-gray-700 focus:outline-none"
+                  >
+                    <span>{selected || "Select..."}</span>
+                    <svg
+                      className={`w-4 h-4 transition-transform ${
+                        subject ? "rotate-180" : "rotate-0"
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+
+                  {/* Dropdown menu */}
+                  {subject && (
+                    <ul className="absolute left-0 w-full bg-white border border-gray-200 rounded-xl shadow-lg z-10">
+                      {options.map((option) => (
+                        <li
+                          key={option}
+                          onClick={() => {
+                            setSelect(option);
+                            setIsOpen(false);
+                          }}
+                          className={`halfrem cursor-pointer hover:bg-gray-100 ${
+                            select === option ? "bg-gray-50 font-medium" : ""
+                          }`}
+                        >
+                          {option}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </div>
 
               {/* Quarter */}
               <div className="flex marginy flex-col">
-                <label className="text-sm sm:text-md text-black font-semibold activitylabel">
+                <label
+                  className="text-sm sm:text-md text-black font-semibold activitylabel"
+                  htmlFor="Quarter"
+                >
                   Quarter
                 </label>
-                <div className="w-full bg-white halfrem border border-gray-300 rounded-xl sm:rounded-2xl">
-                  <select className="w-full outline-none cursor-pointer bg-white halfrem rounded-xl sm:rounded-2xl text-sm sm:text-base text-gray-700">
-                    <option value="">Select...</option>
-                  </select>
+
+                <div className="relative w-full ">
+                  {/* Dropdown button */}
+                  <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="w-full bg-white border border-gray-300 onerem cursor-pointer rounded-xl flex justify-between items-center text-gray-700 focus:outline-none"
+                  >
+                    <span>{selected || "Select..."}</span>
+                    <svg
+                      className={`w-4 h-4 transition-transform ${
+                        isOpen ? "rotate-180" : "rotate-0"
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+
+                  {/* Dropdown menu */}
+                  {isOpen && (
+                    <ul className="absolute left-0 mt-1 w-full   bg-white border border-gray-200 rounded-xl shadow-lg z-10">
+                      {options.map((option) => (
+                        <li
+                          key={option}
+                          onClick={() => {
+                            setSelected(option);
+                            setIsOpen(false);
+                          }}
+                          className={`halfrem cursor-pointer hover:bg-gray-100 ${
+                            selected === option ? "bg-gray-50 font-medium" : ""
+                          }`}
+                        >
+                          {option}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </div>
             </div>
 
             {/* Buttons */}
-            <div className="flex justify-center">
+            <div className="flex Buttons justify-center">
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 md:gap-7 w-full sm:w-auto px-4 sm:px-0">
                 <button
                   onClick={() => {

@@ -7,6 +7,17 @@
 .hero-Logo {
   height: 20%;
   margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.Hero-Logo {
+  height: 20%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.form-div{
+  padding: .5rem .1rem !important;
 }
 
 .Hero-Content {
@@ -157,6 +168,10 @@
 
   .activity-modal-container {
     padding: 1rem !important;
+  }
+
+  .Login-form{
+    padding: .9rem;
   }
 
   .filter-btn {
@@ -313,6 +328,8 @@ order: 2 !important;
 
 .Back-Button {
   margin-bottom: 1rem;
+  /* padding: 0.5rem; */
+  margin-right: 1rem;
 }
 
 .Button-Cart {
@@ -370,10 +387,16 @@ order: 1;
     order: 2;
   }
 
-
+.Surveys-Top{
+  padding-top: 1rem;
+}
 
 .Setting-bottom-left-pg{
   padding: 1rem;
+}
+
+.Buttons{
+  margin-top: .45rem;
 }
 
 .Earning-Top{

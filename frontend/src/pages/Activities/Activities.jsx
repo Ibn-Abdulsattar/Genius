@@ -8,8 +8,14 @@ import DocsTitle from "../../components/DocsTitle";
 import useActivities from "../../hooks/useActivities";
 import SearchFilter from "../../components/SearchFilter";
 import ToggleActivitySurveyBtn from "../../components/ToggleActivitySurveyBtn";
+import CustomDropdown from "../../components/CustomDropdown";
 
 export default function Activities() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState("");
+  const [subject, setsubject] = useState(false);
+  const [select, setSelect] = useState("");
+  const options = ["q1", "q2"];
   const {
     activity,
     setActivity,
@@ -35,23 +41,11 @@ export default function Activities() {
               {/* Dropdowns */}
               {activity === "Todo" && (
                 <div className="flex flex-wrap gap-2 md:gap-3  w-full lg:w-[80%]">
-                  <div className="bg-white cursor-pointer halfrem border border-gray-300 rounded-md p-2 flex-1 sm:flex-none w-[48%] lg:w-[50%]">
-                    <select className="cursor-pointer  w-full text-sm md:text-base text-gray-600 focus:outline-none bg-transparent">
-                      <option>Select Subject</option>
-                      <option>Math</option>
-                      <option>Science</option>
-                    </select>
-                  </div>
-
-                  <div className="bg-white cursor-pointer halfrem border border-gray-300 rounded-md p-2 flex-1 sm:flex-none w-[48%] lg:w-[40%]">
-                    <select className="cursor-pointer w-full text-sm md:text-base text-gray-600 focus:outline-none bg-transparent">
-                      <option>Quarter</option>
-                      <option>Q1</option>
-                      <option>Q2</option>
-                      <option>Q3</option>
-                      <option>Q4</option>
-                    </select>
-                  </div>
+                  <CustomDropdown
+                    label="Select Subject"
+                    options={["Math", "Science"]}
+                  />
+                  <CustomDropdown label="Quarter" options={["Q1", "Q2"]} />
                 </div>
               )}
             </div>
@@ -60,19 +54,21 @@ export default function Activities() {
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full lg:w-[50%]">
               {/* Toggle Buttons */}
               <div className="flex items-center halfrem bg-white rounded-xl shadow-sm w-full lg:w-[50%]">
-                <ToggleActivitySurveyBtn activity={activity} handleActive={handleActive} />
+                <ToggleActivitySurveyBtn
+                  activity={activity}
+                  handleActive={handleActive}
+                />
               </div>
 
               {/* Search */}
               <div className="flex rounded-lg bg-white items-center halfrem  w-full sm:min-w-[250px] lg:min-w-[300px]">
-
                 <SearchFilter activity={activity} setFilter={setFilter} />
               </div>
             </div>
           </div>
 
           {/* Activity-Bottom */}
-          <div className="Activity-bottom relative z-2  bg-white rounded-lg md:rounded-xl overflow-hidden shadow-sm">
+          <div className="Activity-bottom relative  bg-white rounded-lg md:rounded-xl overflow-hidden shadow-sm">
             {activities.map((item, idx) => (
               <Quiz
                 key={idx}

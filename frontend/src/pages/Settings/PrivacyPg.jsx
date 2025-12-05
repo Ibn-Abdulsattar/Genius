@@ -15,7 +15,7 @@ export default function AboutUsPg() {
         {/* All Content */}
         <div className="All-Content about">
           {/* About-Top */}
-          <div className="Earning-Top">
+          <div className="Earning-Top flex">
             {/* Back-Button */}
             <BackButton />
             {/* Title */}

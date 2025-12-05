@@ -31,7 +31,7 @@ export default function LoginPage() {
       {/* Content */}
       <div className="relative text-white min-h-screen flex flex-col px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
         {/* Logo */}
-        <div className="flex justify-center items-center mb-6 sm:mb-8 lg:mb-12">
+        <div className="Hero-Logo flex justify-center items-center ">
           <img
             src="/image/img-1.png"
             className="w-32 h-20 sm:w-40 sm:h-24 md:w-48 md:h-28 object-contain"
@@ -49,15 +49,15 @@ export default function LoginPage() {
             </h1>
 
             {/* Genius ID */}
-            <div className="mb-5 sm:mb-6 lg:mb-8">
+            <div className="">
               <label
                 htmlFor="geniusId"
                 className="block text-sm sm:text-base md:text-lg mb-2 sm:mb-3 font-medium"
               >
                 Genius ID
               </label>
-              <div className="flex border border-white/30 hover:border-white/50 justify-between items-center rounded-xl sm:rounded-2xl px-3 sm:px-4 py-2.5 sm:py-3 md:py-3.5 bg-black/20">
-                <div className="flex gap-2 sm:gap-3 items-center flex-1">
+              <div className="flex border border-white/30 hover:border-white/50 justify-between items-center rounded-xl sm:rounded-2xl  bg-black/20">
+                <div className="flex gap-2 form-div sm:gap-2 gap-3 items-center flex-1">
                   <img
                     src="/image/img-4.png"
                     className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"
@@ -74,7 +74,7 @@ export default function LoginPage() {
                 </div>
                   <button
                     onClick={clearGeniusId}
-                    className="ml-2 flex-shrink-0 hover:opacity-70 cursor-pointer"
+                    className="ml-2 pointthreerem flex-shrink-0 hover:opacity-70 cursor-pointer"
                     aria-label="Clear input"
                   >
                     <svg
@@ -100,12 +100,12 @@ export default function LoginPage() {
             <div className="">
               <label
                 htmlFor="password"
-                className="block text-sm sm:text-base md:text-lg mb-2 sm:mb-3 font-medium"
+                className="block text-sm sm:text-base md:text-lg font-medium"
               >
                 Password
               </label>
-              <div className="flex border border-white/30 hover:border-white/50 transition-colors justify-between items-center rounded-xl sm:rounded-2xl px-3 sm:px-4 py-2.5 sm:py-3 md:py-3.5 bg-black/20">
-                <div className="flex gap-2 sm:gap-3 items-center flex-1">
+              <div className="flex border border-white/30 hover:border-white/50 transition-colors justify-between items-center rounded-xl sm:rounded-2xl  bg-black/20">
+                <div className="flex gap-2 form-div sm:gap-3 items-center flex-1">
                   <svg
                     width="21"
                     height="21"
@@ -138,7 +138,7 @@ export default function LoginPage() {
                 </div>
                 <button
                   onClick={togglePasswordVisibility}
-                  className="flex-shrink-0 hover:opacity-70 cursor-pointer"
+                  className="flex-shrink-0 hover:opacity-70 pointthreerem cursor-pointer"
                 >
                   <svg
                     width="19"
@@ -173,7 +173,7 @@ export default function LoginPage() {
             <div className="flex justify-center">
               <button
                 onClick={handleLogin}
-                className="login cursor-pointer bg-[#FED302] hover:bg-[#fdd000] w-full sm:w-3/4 md:w-2/3 lg:w-1/2 py-3 sm:py-3.5 md:py-4 rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg md:text-xl text-black shadow-lg hover:shadow-xl"
+                className="login cursor-pointer  bg-[#FED302] hover:bg-[#fdd000] w-full sm:w-3/4 md:w-2/3 lg:w-1/2 py-3 sm:py-3.5 md:py-4 rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg md:text-xl text-black shadow-lg hover:shadow-xl"
               >
                 Login
               </button>

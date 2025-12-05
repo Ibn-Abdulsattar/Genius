@@ -12,7 +12,7 @@ export default function SurveysFormPg() {
         {/* All Content */}
         <div className="All-Content ">
           {/* Survey-Top */}
-          <div className="Surveys-Top  ">
+          <div className="Surveys-Top  flex ">
             {/* Back-Button */}
             <BackButton/>
 

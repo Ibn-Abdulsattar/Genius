@@ -9,10 +9,10 @@ export default function BackButton() {
       onClick={() => {
         navigate(-1);
       }}
-      className="group Back-Button cursor-pointer flex items-center"
+      className="group Back-Button border border-gray-200 rounded-full cursor-pointer flex items-center"
     >
       <svg
-        className="w-10 h-10 text-[#012331] -ml-4 transition-all duration-300 group-hover:text-purple-300 group-hover:-translate-x-1"
+        className="w-8 h-8 sm:w-10 sm:h-10 text-[#012331] -ml-4 transition-all duration-300 group-hover:text-purple-300 group-hover:-translate-x-1"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"

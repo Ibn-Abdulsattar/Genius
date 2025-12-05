@@ -2,29 +2,27 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import ReviewModel from "../../components/ReviewModel";
 import BackButton from "../../components/BackButton";
+import DocsTitle from "../../components/DocsTitle";
 import useModule from "../../hooks/useModule";
 
 export default function CartPg() {
-  const {reviewModel, setReviewModel} = useModule();
+  const { reviewModel, setReviewModel } = useModule();
   const navigate = useNavigate();
   return (
     <div className="page-content font-serif w-full">
       <div className=" bg-[#d9d9d9] rounded-2xl md:rounded-3xl min-h-[78.2vh] overflow-x-hidden overflow-y-auto p-3 sm:p-4 md:p-6 lg:p-8">
         {/* All Content */}
-        <div className="All-Content ">
+        <div className="All-Content">
           {/* Activity-Top */}
           <div className="Activity-Top flex ">
+            {/* Back-Button */}
+            <BackButton />
             {/* Title */}
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-[#012331] border-b-4 border-yellow-400 whitespace-nowrap">
-              Cart
-            </h2>
+            <DocsTitle title={"Cart"} />
           </div>
 
           {/* Activity-bottom */}
           <div className="Activity-bottom bg-white rounded-2xl shadow-md  relative">
-            {/* Back-Button */}
-            <BackButton/ >
-
             {/* Cart-card */}
             <div className="cart-card h-auto sm:h-[10rem] border border-gray-200 rounded-xl flex flex-col gap-2 sm:gap-3 sm:flex-row justify-between w-full">
               {/* Cart-left */}
@@ -157,14 +155,12 @@ export default function CartPg() {
 
             {/* Button-Cart */}
             <div
-                onClick={() => {
-                  setReviewModel(true);
-                }}
-            className="Button-Cart flex justify-center px-4 sm:px-6 md:px-8">
-              <div
-                className="flex justify-center cursor-pointer w-full sm:w-[50%] lg:w-[30%] xl:w-[30%] gap-3 sm:gap-4 md:gap-5 items-center rounded-xl sm:rounded-2xl bg-[#007D69] halfrem hover:bg-[#006558] transition-colors duration-200 active:scale-95"
-
-              >
+              onClick={() => {
+                setReviewModel(true);
+              }}
+              className="Button-Cart flex justify-center px-4 sm:px-6 md:px-8"
+            >
+              <div className="flex justify-center cursor-pointer w-full sm:w-[50%] lg:w-[30%] xl:w-[30%] gap-3 sm:gap-4 md:gap-5 items-center rounded-xl sm:rounded-2xl bg-[#007D69] halfrem hover:bg-[#006558] transition-colors duration-200 active:scale-95">
                 <span className="text-yellow-400 font-medium text-base sm:text-lg md:text-xl leading-none">
                   <img src="/image/img-22.png" className="w-7 h-7" alt="icon" />
                 </span>
@@ -175,16 +171,16 @@ export default function CartPg() {
             </div>
 
             {/* Review Model */}
-                      <ReviewModel
-            img={"/image/img-14.png"}
-            title={"You Earned it!"}
-            descrip={
-              "Your hard work has truly paid off! Your prize is on its way and will arrive on Starfall Day. Keep shining bright and chasing your dreams. You are a bright star! Thank you for your amazing perseverance!"
-            }
-            btnText={"Thank You For Participating"}
-            star={false}
-            bgcolor={"#FFF"}
-          />
+            <ReviewModel
+              img={"/image/img-14.png"}
+              title={"You Earned it!"}
+              descrip={
+                "Your hard work has truly paid off! Your prize is on its way and will arrive on Starfall Day. Keep shining bright and chasing your dreams. You are a bright star! Thank you for your amazing perseverance!"
+              }
+              btnText={"Thank You For Participating"}
+              star={false}
+              bgcolor={"#FFF"}
+            />
           </div>
         </div>
       </div>

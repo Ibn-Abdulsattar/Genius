@@ -12,14 +12,38 @@ export default function ReviewModel({
   return (
     <>
       {reviewModel && (
-        <div className="fixed inset-0 z-50 bg-[rgba(0,0,0,0.20)] flex items-center justify-center p-2 sm:p-4">
+        <div className="fixed inset-0 z-50 bg-[rgba(0,0,0,0.20)] flex items-center justify-center">
           {/* Modal Container */}
           <div
             className={`bg-[${
               bgcolor ? bgcolor : "#fff"
-            }] reviewModel activity-modal-container w-[70%] sm:w-[60%] md:w-[50%] lg:w-[45%] xl:w-[40%] 2xl:w-[40%] max-w-[600px] h-[70%] max-h-[95vh] sm:max-h-[90vh] md:h-[81%] md:max-h-[95vh] rounded-2xl sm:rounded-3xl shadow-lg overflow-y-auto`}
+            }] reviewModel relative activity-modal-container w-[70%] sm:w-[60%] md:w-[50%] lg:w-[45%] xl:w-[40%] 2xl:w-[40%] max-w-[600px] h-[70%] max-h-[95vh] sm:max-h-[90vh] md:h-[81%] md:max-h-[95vh] rounded-2xl sm:rounded-3xl shadow-lg overflow-y-auto`}
             style={{ backgroundColor: bgcolor ? bgcolor : "#fff" }}
           >
+            {/* Back Button */}
+            <div className="absolute top-5 left-5">
+              <button
+                onClick={() => {
+                  setReviewModel(false);
+                }}
+                className="group Back-Button border border-gray-200 rounded-full cursor-pointer flex items-center"
+              >
+                <svg
+                  className="w-8 h-8 sm:w-10 sm:h-10 text-[#012331] -ml-4 transition-all duration-300 group-hover:text-purple-300 group-hover:-translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2.5}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+            </div>
+
             <div className="flex flex-col justify-center items-center">
               {/* Review image */}
               <img
@@ -42,7 +66,7 @@ export default function ReviewModel({
             {/* Review button */}
             <div className="flex justify-center px-4 sm:px-6 md:px-8">
               <div
-                className="flex justify-center cursor-pointer w-full sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[53%] gap-3 sm:gap-4 md:gap-5 items-center rounded-xl sm:rounded-2xl bg-[#007D69] halfrem hover:bg-[#006558] transition-colors duration-200 active:scale-95"
+                className="flex justify-center cursor-pointer w-full sm:w-[90%] md:w-[80%] lg:w-[60%] xl:w-[53%] gap-3 sm:gap-4 md:gap-5 items-center rounded-xl sm:rounded-2xl bg-[#007D69] pointthreerem hover:bg-[#006558] transition-colors duration-200 active:scale-95"
                 onClick={() => {
                   setReviewModel(false);
                 }}
@@ -54,7 +78,13 @@ export default function ReviewModel({
                     </span>
                   </button>
                 )}
-                <span className="text-white halfrem text-sm sm:text-base md:text-lg font-medium">
+                <span
+                  className={`text-white  ${
+                    btnText === "Thank You For Participating"
+                      ? "text-xs "
+                      : "text-sm "
+                  }  sm:text-base halfrem md:text-lg font-medium`}
+                >
                   {btnText}
                 </span>
               </div>
