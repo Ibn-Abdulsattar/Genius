@@ -23,6 +23,8 @@ export default function ShowActivityPg() {
         <div className="All-Content ">
           {/* Activity-Top */}
           <div className="Activity-Top flex ">
+                        {/* Back-Button */}
+            <BackButton />
             {/* Title */}
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-[#012331] border-b-4 border-yellow-400 whitespace-nowrap">
               Activities
@@ -31,8 +33,6 @@ export default function ShowActivityPg() {
 
           {/* Activity-bottom */}
           <div className="Activity-bottom bg-white rounded-2xl shadow-md  relative">
-            {/* Back-Button */}
-            <BackButton />
 
             {/* Question */}
             <div className="mb-3">
