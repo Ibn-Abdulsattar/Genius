@@ -1,13 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
-export default function ActivityModal({start, setStart}) {
+export default function ActivityModal({ start, setStart }) {
+  const modalRef = useRef(null);
+
+  useEffect(() => {
+    const preventScroll = (e) => {
+      e.preventDefault();
+      modalRef.current?.scrollBy(0, e.deltaY);
+    };
+
+    if (start) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("wheel", preventScroll, { passive: false });
+    } else {
+      document.body.style.overflow = "auto";
+      window.removeEventListener("wheel", preventScroll);
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+      window.removeEventListener("wheel", preventScroll);
+    };
+  }, [start]);
 
   return (
     <>
       {start && (
         <div className="fixed inset-0 z-50 bg-[rgba(0,0,0,0.20)] flex items-center justify-center p-2 sm:p-4">
           {/* Modal Container */}
-          <div className="bg-white tworem activity-modal-container w-[85%] sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] max-w-[1000px] h-auto max-h-[85vh] sm:max-h-[90vh] md:max-h-[85vh] rounded-2xl sm:rounded-3xl shadow-lg overflow-y-auto">
+          <div
+            ref={modalRef}
+            className="bg-white tworem activity-modal-container w-[85%] sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] max-w-[1000px] h-auto max-h-[85vh] sm:max-h-[90vh] md:max-h-[85vh] rounded-2xl sm:rounded-3xl shadow-lg overflow-y-auto"
+          >
             {/* Modal Card */}
             <div className="bg-white StartedModel rounded-xl">
               {/* Header */}
@@ -16,8 +40,12 @@ export default function ActivityModal({start, setStart}) {
                   What benefits will I receive as a Lyft Pink member?
                 </h2>
                 <button className="flex rounded-lg md:rounded-xl border border-[#d9d9d9] w-[42px] h-[42px] md:w-[48px] md:h-[48px] lg:w-[52px] lg:h-[52px] flex-col items-center justify-center  transition-all touch-manipulation flex-shrink-0 self-end sm:self-auto">
-                  <span className="text-yellow-400 font-medium text-base md:text-lg leading-none">★</span>
-                  <span className="font-medium font-[lato] text-xs md:text-sm">25</span>
+                  <span className="text-yellow-400 font-medium text-base md:text-lg leading-none">
+                    ★
+                  </span>
+                  <span className="font-medium font-[lato] text-xs md:text-sm">
+                    25
+                  </span>
                 </button>
               </div>
 
@@ -47,11 +75,11 @@ export default function ActivityModal({start, setStart}) {
                     onClick={() => {
                       setStart(null);
                     }}
-                    className="cursor-pointer halfrem w-full sm:w-[11rem] md:w-[13rem] lg:w-[15rem] h-[3.2rem] sm:h-[3.5rem] md:h-[4rem] bg-gray-200 text-gray-800 text-sm sm:text-base md:text-lg font-sans rounded-xl sm:rounded-2xl font-medium hover:bg-gray-300 active:bg-gray-400 transition-colors touch-manipulation"
+                    className="cursor-pointer halfrem w-full sm:w-[11rem] md:w-[13rem] lg:w-[15rem] h-[2.5rem] sm:h-[3.5rem] md:h-[4rem] bg-gray-200 text-gray-800 text-sm sm:text-base md:text-lg font-sans rounded-xl sm:rounded-2xl font-medium hover:bg-gray-300 active:bg-gray-400 transition-colors touch-manipulation"
                   >
                     Cancel
                   </button>
-                  <button className="cursor-pointer halfrem w-full sm:w-[11rem] md:w-[13rem] lg:w-[15rem] h-[3.2rem] sm:h-[3.5rem] md:h-[4rem] text-sm sm:text-base md:text-lg font-sans bg-emerald-700 text-white rounded-xl sm:rounded-2xl font-medium hover:bg-emerald-800 active:bg-emerald-900 transition-colors touch-manipulation">
+                  <button className="cursor-pointer halfrem w-full sm:w-[11rem] md:w-[13rem] lg:w-[15rem] h-[2.5rem] sm:h-[3.5rem] md:h-[4rem] text-sm sm:text-base md:text-lg font-sans bg-emerald-700 text-white rounded-xl sm:rounded-2xl font-medium hover:bg-emerald-800 active:bg-emerald-900 transition-colors touch-manipulation">
                     Submit Activity
                   </button>
                 </div>

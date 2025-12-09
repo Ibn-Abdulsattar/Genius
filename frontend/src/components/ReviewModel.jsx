@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import useModule from "../hooks/useModule";
 export default function ReviewModel({
   img,
@@ -9,12 +9,35 @@ export default function ReviewModel({
   bgcolor,
 }) {
   const { reviewModel, setReviewModel } = useModule();
+
+  const modalRef = useRef(null);
+
+  useEffect(() => {
+    const preventScroll = (e) => {
+      e.preventDefault();
+      modalRef.current?.scrollBy(0, e.deltaY);
+    };
+
+    if (reviewModel) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("wheel", preventScroll, { passive: false });
+    } else {
+      document.body.style.overflow = "auto";
+      window.removeEventListener("wheel", preventScroll);
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+      window.removeEventListener("wheel", preventScroll);
+    };
+  }, [reviewModel]);
   return (
     <>
       {reviewModel && (
         <div className="fixed inset-0 z-50 bg-[rgba(0,0,0,0.20)] flex items-center justify-center">
           {/* Modal Container */}
           <div
+            ref={modalRef}
             className={`bg-[${
               bgcolor ? bgcolor : "#fff"
             }] reviewModel relative activity-modal-container w-[70%] sm:w-[60%] md:w-[50%] lg:w-[45%] xl:w-[40%] 2xl:w-[40%] max-w-[600px] h-[70%] max-h-[95vh] sm:max-h-[90vh] md:h-[81%] md:max-h-[95vh] rounded-2xl sm:rounded-3xl shadow-lg overflow-y-auto`}

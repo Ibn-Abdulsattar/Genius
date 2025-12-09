@@ -194,6 +194,14 @@
 .dashboard-left {
   padding: 1rem;
 }
+
+.break-btn{
+  margin-top: .2rem !important;
+}
+
+.break-btn div{
+  padding: 0rem !important;
+}
 }
 
 @media (max-width: 768px) {
@@ -422,6 +430,10 @@ order: 1;
 
 .break-btn{
   margin-top: 1rem;
+}
+
+.break-btn div{
+  padding: .5rem;
 }
 
 .Survey-banner{
