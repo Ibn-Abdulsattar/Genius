@@ -19,10 +19,10 @@ const AppRoutes = () => {
   return (
     <Routes>
       {/* Public Routes */}
-      <Route element={<AuthLayout />}>
+     
         <Route path="/" element={<Hero />} />
         <Route path="/login" element={<LoginPage />} />
-      </Route>
+     
 
       {/* Layout with Navbar */}
       <Route element={<MainLayout />}>
