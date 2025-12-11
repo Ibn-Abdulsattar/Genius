@@ -6,7 +6,7 @@ import DocsTitle from "../../components/DocsTitle";
 export default function StarfallStore() {
   return (
     <div className="page-content font-serif w-full">
-      <div className=" bg-[#d9d9d9] rounded-2xl md:rounded-3xl min-h-[78.2vh] overflow-x-hidden overflow-y-auto p-3 sm:p-4 md:p-6 lg:p-8">
+      <div className="dashboard bg-[#d9d9d9] rounded-2xl md:rounded-3xl max-h-[77.9vh] side-scroll overflow-x-hidden overflow-y-auto p-3 sm:p-4 md:p-6 lg:p-8">
         {/* All Content */}
         <div className="All-Content ">
           {/* Activity-Top */}

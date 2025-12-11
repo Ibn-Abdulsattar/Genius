@@ -57,10 +57,10 @@ export default function LoginPage() {
                 Genius ID
               </label>
               <div className="flex border border-white/30 hover:border-white/50 justify-between items-center rounded-xl sm:rounded-2xl  bg-black/20">
-                <div className="flex gap-2 form-div sm:gap-2 gap-3 items-center flex-1">
+                <div className="flex gap-1 form-div  items-center flex-1">
                   <img
                     src="/image/img-4.png"
-                    className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"
+                    className="w-6 h-6 sm:w-8 sm:h-8 object-cover flex-shrink-0"
                     alt="ID Icon"
                   />
                   <input
@@ -173,7 +173,7 @@ export default function LoginPage() {
             <div className="flex justify-center">
               <button
                 onClick={handleLogin}
-                className="login cursor-pointer  bg-[#FED302] hover:bg-[#fdd000] w-full sm:w-3/4 md:w-2/3 lg:w-1/2 py-3 sm:py-3.5 md:py-4 rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg md:text-xl text-black shadow-lg hover:shadow-xl"
+                className="login cursor-pointer active:scale-98 transition-all duration-200  bg-[#FED302] hover:bg-[#fdd000] w-full sm:w-3/4 md:w-2/3 lg:w-1/2 py-3 sm:py-3.5 md:py-4 rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg md:text-xl text-black shadow-lg hover:shadow-xl"
               >
                 Login
               </button>

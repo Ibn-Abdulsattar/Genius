@@ -12,7 +12,7 @@ export default function Surveys() {
 
   return (
     <div className="page-content font-serif w-full">
-      <div className=" bg-[#d9d9d9] rounded-2xl md:rounded-3xl min-h-[78.2vh] overflow-x-hidden overflow-y-auto p-3 sm:p-4 md:p-6 lg:p-8">
+      <div className="dashboard bg-[#d9d9d9] rounded-2xl md:rounded-3xl max-h-[77.9vh] side-scroll overflow-x-hidden overflow-y-auto p-3 sm:p-4 md:p-6 lg:p-8">
         {/* All Content */}
         <div className="All-Content ">
           {/* Survey-Top */}
@@ -72,7 +72,7 @@ export default function Surveys() {
           </div>
 
           {/* Survey-Bottom */}
-          <div className="Activity-bottom bg-white rounded-lg md:rounded-xl overflow-hidden shadow-sm">
+          <div className="Activity-bottom relative z-1 bg-white rounded-lg md:rounded-xl overflow-hidden shadow-sm">
             {surveys.map((item, idx) => (
               <Quiz
                 key={idx}

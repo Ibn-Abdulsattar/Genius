@@ -42,7 +42,7 @@ export default function Hero() {
           </p>
 
           {/* Login Button */}
-          <div onClick={()=> navigate("/login")} className="cursor-pointer hero-Login-Button inline-flex gap-2 sm:gap-3 items-center hover:gap-4 transition-all duration-300 group">
+          <div onClick={()=> navigate("/login")} className="cursor-pointer hero-Login-Button inline-flex gap-1 items-center hover:gap-2 transition-all duration-300 group">
             <span className="text-[#FED302] font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
               Login
             </span>

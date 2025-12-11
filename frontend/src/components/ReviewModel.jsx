@@ -18,9 +18,17 @@ export default function ReviewModel({
       modalRef.current?.scrollBy(0, e.deltaY);
     };
 
+    const handleModalScroll = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    };
+
     if (reviewModel) {
       document.body.style.overflow = "hidden";
       window.addEventListener("wheel", preventScroll, { passive: false });
+      modalRef.current.addEventListener("wheel", handleModalScroll, {
+        passive: false,
+      });
     } else {
       document.body.style.overflow = "auto";
       window.removeEventListener("wheel", preventScroll);
@@ -40,7 +48,7 @@ export default function ReviewModel({
             ref={modalRef}
             className={`bg-[${
               bgcolor ? bgcolor : "#fff"
-            }] reviewModel relative activity-modal-container w-[70%] sm:w-[60%] md:w-[50%] lg:w-[45%] xl:w-[40%] 2xl:w-[40%] max-w-[600px] h-[70%] max-h-[95vh] sm:max-h-[90vh] md:h-[81%] md:max-h-[95vh] rounded-2xl sm:rounded-3xl shadow-lg overflow-y-auto`}
+            }] reviewModel relative activity-modal-container w-[70%] sm:w-[60%] md:w-[50%] lg:w-[45%] xl:w-[40%] 2xl:w-[40%] max-w-[600px] h-auto max-h-[95vh]  rounded-2xl sm:rounded-3xl shadow-lg overflow-y-auto`}
             style={{ backgroundColor: bgcolor ? bgcolor : "#fff" }}
           >
             {/* Back Button */}
@@ -71,7 +79,7 @@ export default function ReviewModel({
               {/* Review image */}
               <img
                 src={img}
-                className="w-[65%] sm:w-[60%] md:w-[55%] lg:w-[50%] h-[12rem] sm:h-[14rem] md:h-[15rem] lg:h-[16rem] object-contain bg-center pointthreerem"
+                className="w-[65%] sm:w-[60%] md:w-[55%] lg:w-[50%] h-[12rem] sm:h-[14rem] md:h-[15rem] lg:h-[16rem] object-cover bg-center pointthreerem"
                 alt="ReviewImg"
               />
 

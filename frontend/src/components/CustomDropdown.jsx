@@ -5,7 +5,7 @@ export default function CustomDropdown({label, options}) {
   const [selected, setSelected] = useState(label);
 
   return (
-    <div className="relative z-10 w-[45%] lg:w-[47.9%]">
+    <div className="relative z-10  w-[48%] md:w-[45%] lg:w-[47.5%] xl:w-[47.9%]">
       {/* Dropdown button */}
       <div
         onClick={() => setIsOpen(!isOpen)}

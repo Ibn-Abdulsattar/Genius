@@ -12,9 +12,17 @@ export default function BreakModule({ isBreak, setIsBreak }) {
       modalRef.current?.scrollBy(0, e.deltaY);
     };
 
+    const handleModalScroll = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    };
+
     if (isBreak) {
       document.body.style.overflow = "hidden";
       window.addEventListener("wheel", preventScroll, { passive: false });
+      modalRef.current.addEventListener("wheel", handleModalScroll, {
+        passive: false,
+      });
     } else {
       document.body.style.overflow = "auto";
       window.removeEventListener("wheel", preventScroll);
@@ -34,7 +42,7 @@ export default function BreakModule({ isBreak, setIsBreak }) {
           <div
             ref={modalRef}
             className={`bg-[#fff]
-             reviewModel activity-modal-container w-[70%] sm:w-[60%] md:w-[50%] lg:w-[45%] xl:w-[40%] 2xl:w-[40%] max-w-[600px] max-h-[95vh] sm:max-h-[90vh] md:h-[80%] lg:h-[70%] md:max-h-[95vh] rounded-2xl sm:rounded-3xl shadow-lg overflow-y-auto`}
+             reviewModel activity-modal-container w-[70%] sm:w-[60%] md:w-[50%] lg:w-[45%] xl:w-[40%] 2xl:w-[40%] max-w-[600px] max-h-[95vh] h-auto rounded-2xl sm:rounded-3xl shadow-lg overflow-y-auto`}
           >
             <div className="flex flex-col justify-center items-center">
               {/* Review image */}

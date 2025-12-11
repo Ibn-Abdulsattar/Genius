@@ -15,9 +15,17 @@ export default function Filter({ filter, setFilter }) {
       modalRef.current?.scrollBy(0, e.deltaY);
     };
 
+    const handleModalScroll = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    };
+
     if (filter) {
       document.body.style.overflow = "hidden";
       window.addEventListener("wheel", preventScroll, { passive: false });
+      modalRef.current.addEventListener("wheel", handleModalScroll, {
+        passive: false,
+      });
     } else {
       document.body.style.overflow = "auto";
       window.removeEventListener("wheel", preventScroll);
@@ -32,13 +40,13 @@ export default function Filter({ filter, setFilter }) {
     <>
       {filter && (
         <div
-          id="Activity-filter-model"
+          id="Activity_filter_model"
           className="fixed inset-0 z-50 bg-[rgba(0,0,0,0.20)] flex items-center justify-center p-2 sm:p-4"
         >
           {/* Modal Container */}
           <div
             ref={modalRef}
-            className="bg-[#F4F4F4]  tworem activity-modal-container w-[87%] sm:w-[85%] md:w-[75%] lg:w-[65%] xl:w-[60%] max-w-[900px] h-auto max-h-[80vh] sm:max-h-[70vh] md:h-[63%] rounded-2xl sm:rounded-3xl shadow-lg overflow-y-auto"
+            className="bg-[#F4F4F4]  tworem activity-modal-container w-[87%] sm:w-[85%] md:w-[75%] lg:w-[65%] xl:w-[60%] max-w-[900px] h-auto max-h-[90vh]  rounded-2xl sm:rounded-3xl shadow-lg overflow-y-auto"
           >
             <h2 className="text-center flex justify-center text-2xl sm:text-xl md:text-2xl font-semibold mb-4 sm:mb-6 relative">
               <span className="border-b-2 text-[#012331] border-yellow-400 pb-1">
@@ -58,7 +66,7 @@ export default function Filter({ filter, setFilter }) {
                     className="w-full bg-white onerem border border-gray-300 rounded-xl sm:rounded-2xl text-sm sm:text-base text-gray-700 outline-none appearance-none [&::-webkit-calendar-picker-indicator]:hidden"
                     value="2024-08-12"
                   />
-                  <span className="absolute right-2 sm:right-3 top-3 sm:top-5 text-gray-400 pointer-events-none">
+                  <span className="absolute right-3 sm:right-3 top-5 sm:top-5 text-gray-400 pointer-events-none">
                     <svg
                       width="18"
                       height="18"
@@ -95,7 +103,7 @@ export default function Filter({ filter, setFilter }) {
                     className="w-full bg-white onerem border border-gray-300 rounded-xl sm:rounded-2xl text-sm sm:text-base text-gray-700 outline-none appearance-none [&::-webkit-calendar-picker-indicator]:hidden"
                     value="2024-08-22"
                   />
-                  <span className="absolute right-2 sm:right-3 top-3 sm:top-5 text-gray-400 pointer-events-none">
+                  <span className="absolute right-3 sm:right-3 top-5 sm:top-5 text-gray-400 pointer-events-none">
                     <svg
                       width="18"
                       height="18"

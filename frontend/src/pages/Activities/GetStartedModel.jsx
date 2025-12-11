@@ -9,9 +9,17 @@ export default function ActivityModal({ start, setStart }) {
       modalRef.current?.scrollBy(0, e.deltaY);
     };
 
+    const handleModalScroll = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    };
+
     if (start) {
       document.body.style.overflow = "hidden";
       window.addEventListener("wheel", preventScroll, { passive: false });
+      modalRef.current.addEventListener("wheel", handleModalScroll, {
+        passive: false,
+      });
     } else {
       document.body.style.overflow = "auto";
       window.removeEventListener("wheel", preventScroll);

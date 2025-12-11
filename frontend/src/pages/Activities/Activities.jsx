@@ -11,11 +11,6 @@ import ToggleActivitySurveyBtn from "../../components/ToggleActivitySurveyBtn";
 import CustomDropdown from "../../components/CustomDropdown";
 
 export default function Activities() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState("");
-  const [subject, setsubject] = useState(false);
-  const [select, setSelect] = useState("");
-  const options = ["q1", "q2"];
   const {
     activity,
     setActivity,
@@ -28,7 +23,7 @@ export default function Activities() {
 
   return (
     <div className="page-content font-serif w-full">
-      <div className=" bg-[#d9d9d9] rounded-2xl md:rounded-3xl side-scroll min-h-[77.9vh] overflow-x-hidden">
+      <div className=" dashboard bg-[#d9d9d9] rounded-2xl md:rounded-3xl max-h-[77.9vh] side-scroll overflow-x-hidden">
         {/* All Content */}
         <div className="All-Content overflow-y-auto">
           {/* Activity-Top */}

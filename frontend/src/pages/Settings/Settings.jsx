@@ -10,7 +10,7 @@ const navigate = useNavigate();
 
   return (
     <div className="page-content font-serif w-full">
-      <div className=" bg-[#d9d9d9] rounded-2xl md:rounded-3xl min-h-[77.9vh] overflow-x-hidden overflow-y-auto">
+      <div className="dashboard bg-[#d9d9d9] rounded-2xl md:rounded-3xl lg:min-h-[77.9vh] max-h-[77.9vh] side-scroll overflow-x-hidden overflow-y-auto">
         {/* All Content */}
         <div className="All-Content ">
           {/* Setting-Top */}
